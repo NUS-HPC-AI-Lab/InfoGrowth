@@ -1,2 +1,6 @@
 # InfoGrowth
-Efficient and Online Dataset Growth Algorithm (with cleanness and diversity awareness) to deal with growing web data
+Efficient and Online Dataset Growth Algorithm to deal with growing web data.
+
+Cleanness and diversity awareness.
+
+Code to be updated.
