@@ -2,6 +2,7 @@
 <p align="center"><b>ECCV 2024</b> | <a href="https://arxiv.org/abs/2405.18347">[Paper]</a> | <a href="https://github.com/NUS-HPC-AI-Lab/InfoGrowth">[Code]</a> </p>
 
 InfoGrowth is an efficient online algorithm to deal with growing web data. It provides cleanness and diversity awareness on the dataset.
+For BLIP training on CC3M, it can provides a 14x acceleration with data reduction together with efficient sampling.
 
 https://github.com/user-attachments/assets/5496aacc-f50e-494f-9dc0-87709cd2ad7a
 
