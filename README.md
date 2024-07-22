@@ -12,11 +12,11 @@ Image and captions are selected in json format. We provide our cleaned 400k samp
 
 ## Experiments
 
-###Download Data/Model
+### Download Data/Model
 
 Need to prepare CC3M dataset and BLIP encoders. TO BE UPDATED.
 
-###Preprocessing
+### Preprocessing
 
 We introduce lmdb to accelerate data loading. It need a preprocessing as follows: UPDATING SOON
 
@@ -26,13 +26,13 @@ We introduce lmdb to accelerate data loading. It need a preprocessing as follows
 
 [//]: # (```)
 
-###Pretrain
+### Pretrain
 
 ```shell
 python3 -m torch.distributed.run --nnodes 2 --nproc_per_node 8 --master_port 12365 train/pretrain_gain.py --config train/configs/pretrain_cc3m_gain.yaml
 ```
 
-###Eval
+### Eval
 
 TO BE UPDATED
 
