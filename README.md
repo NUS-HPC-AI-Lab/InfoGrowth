@@ -38,10 +38,11 @@ TO BE UPDATED
 
 
 ## Citation
-
+```bibtex
 @inproceedings{qin2024datasetgrowth,
       title={Dataset Growth}, 
       author={Ziheng Qin and Zhaopan Xu and Yukun Zhou and Zangwei Zheng and Zebang Cheng and Hao Tang and Lei Shang and Baigui Sun and Xiaojiang Peng and Radu Timofte and Hongxun Yao and Kai Wang and Yang You},
       booktitle={ECCV},
       year={2024}
 }
+```
