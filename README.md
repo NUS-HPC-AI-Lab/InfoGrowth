@@ -6,16 +6,18 @@ InfoGrowth is an efficient online algorithm to deal with growing web data. It pr
 https://github.com/user-attachments/assets/5496aacc-f50e-494f-9dc0-87709cd2ad7a
 
 ## InfoGrowth and Processed Data
-
+Algorithm code coming soon. 
 
 Image and captions are selected in json format. We provide our cleaned 400k samples in processed_data.
 
 ## Experiments
 
 ###Download Data/Model
+
 Need to prepare CC3M dataset and BLIP encoders. TO BE UPDATED.
 
 ###Preprocessing
+
 We introduce lmdb to accelerate data loading. It need a preprocessing as follows: UPDATING SOON
 
 [//]: # (```shell)
@@ -25,15 +27,18 @@ We introduce lmdb to accelerate data loading. It need a preprocessing as follows
 [//]: # (```)
 
 ###Pretrain
+
 ```shell
 python3 -m torch.distributed.run --nnodes 2 --nproc_per_node 8 --master_port 12365 train/pretrain_gain.py --config train/configs/pretrain_cc3m_gain.yaml
 ```
 
 ###Eval
+
 TO BE UPDATED
 
 
 ## Citation
+
 @inproceedings{qin2024datasetgrowth,
       title={Dataset Growth}, 
       author={Ziheng Qin and Zhaopan Xu and Yukun Zhou and Zangwei Zheng and Zebang Cheng and Hao Tang and Lei Shang and Baigui Sun and Xiaojiang Peng and Radu Timofte and Hongxun Yao and Kai Wang and Yang You},
