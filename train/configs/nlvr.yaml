@@ -1,0 +1,22 @@
+image_root: '/zhaobai46a02/NLVR'
+ann_root: '/zhaobai46a02/NLVR/annotations'
+lmdb_root: '/zhaobai46a02/NLVR/lmdb'
+
+# set pretrained as a file path or an url
+pretrained: '/zhaobai46a02/pretrained/model_base_nlvr.pth'
+
+#size of vit model; base or large
+vit: 'base'
+batch_size_train: 16 
+batch_size_test: 64 
+vit_grad_ckpt: False
+vit_ckpt_layer: 0
+max_epoch: 15
+
+image_size: 384
+
+# optimizer
+weight_decay: 0.05
+init_lr: 3e-5
+min_lr: 0
+
