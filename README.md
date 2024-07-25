@@ -28,21 +28,23 @@ Will be automatically prepared by code. Be sure to have internet connection.
 We introduce lmdb to accelerate data loading. It need a preprocessing as follows: 
 
 ```shell
-python scripts/cc3m_lmdb_writer.py --image_root your_path
+python3 code/scripts/cc3m_lmdb_writer.py --image_root your_path
 ```
 
 ### Pretrain
-
+Go to code directory and then execute pretrain
 ```shell
-python3 -m torch.distributed.run --nnodes 2 --nproc_per_node 8 --master_port 12365 train/pretrain_gain.py --config train/configs/pretrain_cc3m_gain.yaml
+cd code
+python3 -m torch.distributed.run --nnodes 2 --nproc_per_node 8 --master_port 12365 pretrain_gain.py --config ./configs/pretrain_cc3m_gain.yaml
 ```
 
 ### Eval
-To evalutate pretrained model on COCO, execute the following commands with substitution to your path.
+To evalutate pretrained model on COCO, go to code directory and execute the following commands with substitution to your path.
 ```shell
+cd code
 TEST_CKPT=/path/to/test_checkpoint.pth
-python3 -m torch.distributed.run --nproc_per_node=8 train/train_retrieval.py \ 
-    --config ./train/configs/retrieval_coco.yaml \
+python3 -m torch.distributed.run --nproc_per_node=8 train_retrieval.py \ 
+    --config ./code/configs/retrieval_coco.yaml \
     --output_dir output/retrieval_coco \
     --pretrained $TEST_CKPT \
     --evaluate
