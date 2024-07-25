@@ -15,17 +15,21 @@ Image and captions are selected in json format. We provide our cleaned 400k samp
 
 ### Download Data/Model
 
-Need to prepare CC3M dataset and BLIP encoders. TO BE UPDATED.
+Need to prepare CC3M dataset and BLIP encoders. 
+
+#### Download CC3M
+Refer to https://github.com/rom1504/img2dataset/blob/main/dataset_examples/cc3m.md
+
+#### Download Model Checkpoint
+Will be automatically prepared by code. Be sure to have internet connection.
 
 ### Preprocessing
 
-We introduce lmdb to accelerate data loading. It need a preprocessing as follows: UPDATING SOON
+We introduce lmdb to accelerate data loading. It need a preprocessing as follows: 
 
-[//]: # (```shell)
-
-[//]: # (TO BE UPDATED)
-
-[//]: # (```)
+```shell
+python scripts/cc3m_lmdb_writer.py --image_root your_path
+```
 
 ### Pretrain
 
@@ -34,9 +38,15 @@ python3 -m torch.distributed.run --nnodes 2 --nproc_per_node 8 --master_port 123
 ```
 
 ### Eval
-
-TO BE UPDATED
-
+To evalutate pretrained model on COCO, execute the following commands with substitution to your path.
+```shell
+TEST_CKPT=/path/to/test_checkpoint.pth
+python3 -m torch.distributed.run --nproc_per_node=8 train/train_retrieval.py \ 
+    --config ./train/configs/retrieval_coco.yaml \
+    --output_dir output/retrieval_coco \
+    --pretrained $TEST_CKPT \
+    --evaluate
+```
 
 ## Citation
 ```bibtex
