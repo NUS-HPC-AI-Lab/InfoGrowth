@@ -1,5 +1,5 @@
 dataset: 'cc3m_gain'
-ann_root: 'processed_data/InfoGrowth_400k_samples.json'
+ann_root: '../processed_data/InfoGrowth_400k_samples.json'
 lmdb_root: '/PATHTOCC3M/cc3m/lmdb_train'
 
 # size of vit model; base or large
