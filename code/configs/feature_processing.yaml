@@ -1,0 +1,32 @@
+# dataset config
+dataset: "cc3m"
+# dataset: "cc3m_text"
+caption_method: 'best'
+
+# ann_root: '/data/common/cc3m/merged_captions.json'
+# ann_root: 'minigpt4_cc_captions.json'
+# ann_root: 'uncovered_list.json'
+ann_root: '/data/common/cc3m/cc3m_train_raw.json'
+
+lmdb_root: '/data/common/cc3m/lmdb_train'
+save_root: '/data/common/cc3m/blip_features'
+# save_root: '.'
+
+# step one: sample and get candidate
+sample_num: 2715616
+alpha: 0
+# feature_save_file: 'mini_text_feature_all.pth'
+# feature_save_file: 'uncover_features.pth'
+feature_save_file: cc3m_raw_features.pth
+cal_feat: True
+
+# model config
+vit: 'base'
+vit_grad_ckpt: False
+vit_ckpt_layer: 0
+
+image_size: 224
+batch_size: 128
+
+queue_size: 57600
+checkpoint: '/data/personal/nus-qzh/blip-base/blip_149_model_base.pth'
