@@ -7,9 +7,9 @@ For BLIP training on CC3M, it can provides a 14x acceleration with data reductio
 https://github.com/user-attachments/assets/5496aacc-f50e-494f-9dc0-87709cd2ad7a
 
 ## InfoGrowth and Processed Data
-Algorithm code coming soon. 
+Algorithm is now updated in code/InfoGrowth.ipynb. 
 
-Image and captions are selected in json format. We provide our cleaned 400k samples in processed_data.
+We provide our cleaned 400k samples in processed_data. Image and captions are selected in json format.
 
 ## Experiments
 

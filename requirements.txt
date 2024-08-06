@@ -1,0 +1,10 @@
+hnswlib==0.7.0
+lmdb==1.4.1
+numpy==1.26.1
+torch==1.12.1
+torchaudio==0.10.2+cu113
+torchvision==0.13.1
+tqdm==4.63.0
+transformers==4.34.1
+typing==3.7.4.3
+typing_extensions==4.7.1
